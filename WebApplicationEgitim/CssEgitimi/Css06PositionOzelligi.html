@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Css Position Özelliği</title>
+</head>
+<body>
+    <h1>Css Position Özelliği</h1>
+    <p>
+        Css position özelliği html elementlerini ekranda konumlandırmak için kullanılır.
+    </p>
+
+    <h2>5 Farklı Konum Özelliği Vardır</h2>
+    <ol>
+        <li>static : varsayılan değerdir konumlandırmadan etkilenmez</li>
+        <li>relative : göreceli</li>
+        <li>fixed : sabit</li>
+        <li>absolute : mutlak</li>
+        <li>sticky : yapışkan</li>
+    </ol>
+
+    <hr />
+
+    <h2>Position : relative</h2>
+    <div style="position: relative; border: 1px solid;">
+        <p>
+            position:relative olan öğe üst(top), sağ(right), alt(bottom) ve sol(left) değerlerine göre konumlanır
+        </p>
+        <div style="position: relative; left:25px; top:34px; border:1px solid;">
+            position:relative elementi kullanımı
+        </div>
+    </div>
+
+
+    <h2>position: fixed (sabit)</h2>
+
+    <p>
+        Bir elemana position: fixed özelliği tanımlanırsa bu öğe hep aynı yerinde kalır.
+    </p>
+    <p>
+        Öğeyi konumlandırmak için üst(top), sağ(right), alt(bottom) ve sol(left) özellikler kullanılır.
+    </p>
+
+    <div style="position:fixed; bottom:1rem; right: 3rem; width:180px; border:3px inset">
+        position:fixed uygulanmış div
+    </div>
+
+    <h3>
+        position:absolute-mutlak konum
+    </h3>
+    <p>
+        absolute özelliği ile elementlere mutlaka bulunmaları gereken konumunu belirleyebiliriz.
+    </p>
+    <div style="position:relative; border:1px solid; margin-bottom: 5rem">
+        Kapsayıcı div e position:relative özelliği veriyoruz
+        <div style="position: absolute; top: 80px; right: 0; border: 3px inset">
+            position: absolute uygulanan div
+        </div>
+    </div>
+
+    <h3>Position-Sticky</h3>
+
+    <p>
+        Kullanıcının kaydırma konumuna göre konumlandırılmış bir öğe oluşturmamızı sağlar.
+    </p>
+
+    <div style="position: sticky; top: 0; padding: 5px; background-color: antiquewhite; border: 2px solid #4CAF50;">
+        Ben yapışkanım!
+    </div>
+
+    <div style="padding-bottom:700px">
+        Burası da sticky alanın altındaki içerik alanı. <br />
+        Sayfa kaydırıldığında sticky alan sabit kalır
+    </div>
+
+    <hr />
+
+    <h2>Öğelerin Çakışma Durumu</h2>
+    <p>
+        Position absolute kullandığımız durumlarda öğeler üst üste binebilir.<br />
+        Bu durumda css de z-index özelliği kullanılarak üstte kalmasını istediğimiz elemanı ayarlayabiliriz.
+    </p>
+    <div style="position:relative; width:500px; height:500px; border:3px solid green">
+        Burası kapsayıcı div alanı
+        <div style="position:absolute; top:80px; right:0; width:200px; height:100px; border:3px solid yellow; background-color: blue; z-index:2">
+            Bu 1. div position:absolute
+        </div>
+        <div style="position: absolute; top: 80px; right: 0; width: 200px; height: 100px; border: 3px solid blue; background-color: yellow; z-index: 1">
+            Bu 2. div position:absolute
+        </div>
+    </div>
+
+    <div style="height:500px"></div>
+</body>
+</html>
