@@ -20,7 +20,7 @@ namespace MVCEgitim
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new Bundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.bundle.min.js"));//açılır menunun çalışması için yaptık
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.min.css",
